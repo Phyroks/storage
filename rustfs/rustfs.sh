@@ -137,7 +137,7 @@ export RUSTFS_CONSOLE_ENABLE=true
 
 export RUST_LOG=error
 
-./rustfs data
+./rustfs $DATA_LOCATION
 
 else
 
@@ -152,7 +152,7 @@ export RUSTFS_CONSOLE_ENABLE=true
 
 export RUST_LOG=error
 
-./rustfs data
+./rustfs $DATA_LOCATION
 
 fi
 

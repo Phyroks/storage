@@ -2,9 +2,9 @@
     "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL",
     "meta": {
         "version": "PLCN_v3",
-        "update_url": "https://raw.githubusercontent.com/parkervcp/eggs/master/storage/rustfs/egg-rustfs.json"
+        "update_url": null
     },
-    "exported_at": "2026-01-15T10:49:40+00:00",
+    "exported_at": "2026-01-15T12:42:22+00:00",
     "name": "RustFS",
     "author": "mika@galaxybot.app",
     "uuid": "473fa037-e935-4f62-aa6f-6157444ec714",
@@ -45,6 +45,19 @@
             "rules": [
                 "integer",
                 "max:65535"
+            ]
+        },
+        {
+            "sort": 3,
+            "name": "Data location",
+            "description": "Path where the data is being stored",
+            "env_variable": "DATA_LOCATION",
+            "default_value": "data",
+            "dropdown": null,
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "string"
             ]
         },
         {

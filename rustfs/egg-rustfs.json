@@ -4,7 +4,7 @@
         "version": "PLCN_v3",
         "update_url": "https://raw.githubusercontent.com/parkervcp/eggs/master/storage/rustfs/egg-rustfs.json"
     },
-    "exported_at": "2026-01-15T16:01:04+00:00",
+    "exported_at": "2026-01-15T16:28:44+00:00",
     "name": "RustFS",
     "author": "mika@galaxybot.app",
     "uuid": "473fa037-e935-4f62-aa6f-6157444ec714",
@@ -39,7 +39,6 @@
             "description": "The port where RustFS UI is running.",
             "env_variable": "CONSOLE_PORT",
             "default_value": "9002",
-            "dropdown": null,
             "user_viewable": true,
             "user_editable": true,
             "rules": [
@@ -53,7 +52,6 @@
             "description": "Path where the data is being stored",
             "env_variable": "DATA_LOCATION",
             "default_value": "data",
-            "dropdown": null,
             "user_viewable": true,
             "user_editable": true,
             "rules": [
@@ -67,12 +65,10 @@
             "description": " The RustFS WebUI",
             "env_variable": "ENABLE_CONSOLE",
             "default_value": "0",
-            "dropdown": null,
             "user_viewable": true,
             "user_editable": true,
             "rules": [
-                "boolean",
-                "required"
+                "boolean"
             ]
         },
         {
@@ -81,7 +77,6 @@
             "description": "normal,rotate,update",
             "env_variable": "STARTUP_TYPE",
             "default_value": "normal",
-            "dropdown": null,
             "user_viewable": true,
             "user_editable": true,
             "rules": [

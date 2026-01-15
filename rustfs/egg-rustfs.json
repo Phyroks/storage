@@ -4,7 +4,7 @@
         "version": "PLCN_v3",
         "update_url": null
     },
-    "exported_at": "2026-01-15T12:42:22+00:00",
+    "exported_at": "2026-01-15T16:01:04+00:00",
     "name": "RustFS",
     "author": "mika@galaxybot.app",
     "uuid": "473fa037-e935-4f62-aa6f-6157444ec714",
@@ -34,7 +34,7 @@
     },
     "variables": [
         {
-            "sort": 2,
+            "sort": 3,
             "name": "Console Port",
             "description": "The port where RustFS UI is running.",
             "env_variable": "CONSOLE_PORT",
@@ -48,7 +48,7 @@
             ]
         },
         {
-            "sort": 3,
+            "sort": 4,
             "name": "Data location",
             "description": "Path where the data is being stored",
             "env_variable": "DATA_LOCATION",
@@ -57,7 +57,22 @@
             "user_viewable": true,
             "user_editable": true,
             "rules": [
-                "string"
+                "string",
+                "required"
+            ]
+        },
+        {
+            "sort": 2,
+            "name": "Enable Console",
+            "description": " The RustFS WebUI",
+            "env_variable": "ENABLE_CONSOLE",
+            "default_value": "0",
+            "dropdown": null,
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": [
+                "boolean",
+                "required"
             ]
         },
         {

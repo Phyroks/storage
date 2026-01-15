@@ -128,12 +128,15 @@ echo "Your Old Secret Key is: $(tput setaf 3)$RUSTFS_SECRET_KEY_OLD"
 
 echo "$(tput setaf 2)Booting..."
 
-export RUSTFS_VOLUMES="data"
+export RUSTFS_VOLUMES=$DATA_LOCATION
 
 export RUSTFS_ADDRESS=":$SERVER_PORT"
-export RUSTFS_CONSOLE_ADDRESS=":$CONSOLE_PORT"
 
-export RUSTFS_CONSOLE_ENABLE=true
+export RUSTFS_CONSOLE_ENABLE=false
+if [ "$ENABLE_CONSOLE" = "1" ]; then
+    export RUSTFS_CONSOLE_ADDRESS=":$CONSOLE_PORT"
+    export RUSTFS_CONSOLE_ENABLE=true
+fi
 
 export RUST_LOG=error
 
@@ -143,12 +146,17 @@ else
 
 echo "$(tput setaf 2)Booting..."
 
-export RUSTFS_VOLUMES="data"
+export RUSTFS_VOLUMES=$DATA_LOCATION
 
 export RUSTFS_ADDRESS=":$SERVER_PORT"
-export RUSTFS_CONSOLE_ADDRESS=":$CONSOLE_PORT"
 
-export RUSTFS_CONSOLE_ENABLE=true
+export RUSTFS_CONSOLE_ENABLE="$CONSOLE_PORT"
+
+export RUSTFS_CONSOLE_ENABLE=false
+if [ "$ENABLE_CONSOLE" = "1" ]; then
+    export RUSTFS_CONSOLE_ADDRESS=":$CONSOLE_PORT"
+    export RUSTFS_CONSOLE_ENABLE=true
+fi
 
 export RUST_LOG=error
 
